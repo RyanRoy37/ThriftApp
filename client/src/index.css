@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(142, 76%, 36%);
+  --primary-foreground: hsl(355, 100%, 97%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Custom eco-friendly colors */
+  --eco-primary: hsl(150, 100%, 28%);
+  --eco-secondary: hsl(143, 64%, 55%);
+  --eco-accent: hsl(43, 96%, 56%);
+  --eco-light: hsl(142, 76%, 94%);
+  --earth-brown: hsl(26, 85%, 31%);
+  --earth-beige: hsl(49, 100%, 89%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(142, 76%, 36%);
+  --primary-foreground: hsl(355, 100%, 97%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for eco colors */
+.text-eco-primary { color: var(--eco-primary); }
+.bg-eco-primary { background-color: var(--eco-primary); }
+.text-eco-secondary { color: var(--eco-secondary); }
+.bg-eco-secondary { background-color: var(--eco-secondary); }
+.text-eco-accent { color: var(--eco-accent); }
+.bg-eco-accent { background-color: var(--eco-accent); }
+.text-eco-light { color: var(--eco-light); }
+.bg-eco-light { background-color: var(--eco-light); }
+.text-earth-brown { color: var(--earth-brown); }
+.bg-earth-brown { background-color: var(--earth-brown); }
+.text-earth-beige { color: var(--earth-beige); }
+.bg-earth-beige { background-color: var(--earth-beige); }
+
+.border-eco-primary { border-color: var(--eco-primary); }
+.border-eco-secondary { border-color: var(--eco-secondary); }
